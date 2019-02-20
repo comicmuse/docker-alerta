@@ -6,7 +6,7 @@ ARG VERSION
 USER root
 
 RUN yum install -y \
-    mongodb-clients \
+    mongodb-org-tools \ 
     postgresql-client \
     gettext \
     && yum clean all -y
