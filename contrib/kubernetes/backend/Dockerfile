@@ -3,7 +3,7 @@ ENV PYTHONUNBUFFERED 1
 
 ARG VERSION
 
-RUN apt-get update && apt-get install -y \
+RUN rpm update && rpm install -y \
     mongodb-clients \
     postgresql-client \
     gettext
