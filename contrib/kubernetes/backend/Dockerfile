@@ -3,6 +3,8 @@ ENV PYTHONUNBUFFERED 1
 
 ARG VERSION
 
+USER root
+
 RUN yum update && yum install -y \
     mongodb-clients \
     postgresql-client \
