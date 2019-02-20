@@ -5,10 +5,12 @@ ARG VERSION
 
 USER root
 
-RUN yum update && yum install -y \
+RUN yum install -y \
     mongodb-clients \
     postgresql-client \
-    gettext
+    gettext \
+    && yum clean all -y
+   
 
 RUN pip install --no-cache-dir virtualenv && \
     virtualenv --python=python3 /venv && \
