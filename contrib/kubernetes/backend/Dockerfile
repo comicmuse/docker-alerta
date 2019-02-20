@@ -22,9 +22,9 @@ WORKDIR /app
 
 RUN chgrp -R 0 /app /venv && \
     chmod -R g=u /app /venv && \
-    useradd -u 1001 -g 0 alerta
+    useradd -u 2001 -g 0 alerta
 
-USER 1001
+USER 2001
 
 COPY wsgi.py /app/wsgi.py
 COPY uwsgi.ini /app/uwsgi.ini
