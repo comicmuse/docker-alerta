@@ -12,5 +12,7 @@ ENV ALERTA_API_SERVER 'http://alerta:8080/'
 COPY config.json.template /usr/share/nginx/html/config.json.template
 COPY alerta-frontend-entrypoint.sh /alerta-frontend-entrypoint.sh
 
+USER root
+
 ENTRYPOINT ["/alerta-frontend-entrypoint.sh"]
 CMD ["nginx", "-g", "daemon off;"]
